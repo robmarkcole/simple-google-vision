@@ -1,9 +1,11 @@
 from setuptools import setup, find_packages
 
-VERSION = "0.1"
+VERSION = "0.2"
 
-with open('requirements.txt') as f:
-    requirements = f.read().splitlines()
+REQUIRES = [
+    "google-cloud-vision==0.39.0",
+    "google-oauth==1.0.1"
+]
 
 setup(
     name="simple-google-vision",
@@ -12,7 +14,7 @@ setup(
     author="Robin Cole",
     author_email="robmarkcole@gmail.com",
     description="Unofficial helpers for Google Vision",
-    install_requires=requirements,
+    install_requires=REQUIRES,
     packages=find_packages(),
     license="Apache License, Version 2.0",
     python_requires=">=3.6",
