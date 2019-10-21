@@ -9,5 +9,5 @@ Unofficial helper utilities for using Google Vision, providing helper utilities 
 * Use `venv` -> `python3 -m venv venv` & `source venv/bin/activate`
 * `pip install -e .`
 * `pip install -r requirements-dev.txt`
-* Run tests with `venv/bin/pytest tests/*`
+* Run tests with `venv/bin/pytest tests/* --disable-warnings`
 * Black format with `venv/bin/black gvision/core.py` and `venv/bin/black tests/test_gvision.py`
