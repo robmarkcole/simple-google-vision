@@ -3,7 +3,7 @@
 [![build status](http://img.shields.io/travis/robmarkcole/simple-google-vision/master.svg?style=flat)](https://travis-ci.com/robmarkcole/simple-google-vision)
 
 # simple-google-vision
-Unofficial helper utilities for using [Google Vision](https://cloud.google.com/vision/), providing helper utilities for using Google Vision. Currently supports object detection with functions for processing the list of objects returned by the API. See the [`usage.ipynb`](https://github.com/robmarkcole/simple-google-vision/blob/master/usage.ipynb) notebook for usage.
+Unofficial helper utilities for using the [Google Vision API](https://pypi.org/project/google-cloud-vision/). Currently supports object detection with functions for processing the list of objects returned by the API. See the [`usage.ipynb`](https://github.com/robmarkcole/simple-google-vision/blob/master/usage.ipynb) notebook for usage.
 
 ## Google Vision API key file & API Pricing
 Follow the instructions on https://cloud.google.com/docs/authentication/getting-started to download your Google Vision API key, which is a `.json` file. 
