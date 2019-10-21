@@ -62,3 +62,20 @@ def get_objects_summary(objects: List[types.LocalizedObjectAnnotation]):
         target: len(get_object_confidences(objects, target))
         for target in objects_labels
     }
+
+
+class Vision(object):
+    """Interact with Google Vision."""
+
+    def __init__(self, api_key_file):
+        credentials = service_account.Credentials.from_service_account_file(
+            api_key_file
+        )
+        scoped_credentials = credentials.with_scopes(
+            ["https://www.googleapis.com/auth/cloud-platform"]
+        )
+        self._client = vision.ImageAnnotatorClient(credentials=scoped_credentials)
+
+    def object_localization(self, image_bytes):
+        """Return the list of objects in an image from the imge bytes."""
+        return self._client.object_localization(image=types.Image(content=image_bytes))
