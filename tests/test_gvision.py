@@ -44,7 +44,9 @@ def test_format_confidence():
 
 
 def test_get_objects():
-    assert gvision.get_objects(MOCK_OBJECTS) == ["person", "dog"]
+    OBJECTS = gvision.get_objects(MOCK_OBJECTS)
+    assert "person" in OBJECTS
+    assert "dog" in OBJECTS
 
 
 def test_get_object_confidences():
@@ -52,4 +54,8 @@ def test_get_object_confidences():
 
 
 def test_get_objects_summary():
-    assert gvision.get_objects_summary(MOCK_OBJECTS) == {'dog': 1, 'person': 1}
+    SUMMARY = gvision.get_objects_summary(MOCK_OBJECTS)
+    assert 'dog' in SUMMARY.keys()
+    assert SUMMARY['dog'] == 1
+    assert 'person' in SUMMARY.keys()
+    assert SUMMARY['person'] == 1
