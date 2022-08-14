@@ -1,10 +1,10 @@
 from setuptools import setup, find_packages
 
-VERSION = "0.3"
+VERSION = "0.4"
 
 REQUIRES = [
-    "google-cloud-vision==0.39.0",
-    "google-oauth==1.0.1"
+    "google-cloud-vision",
+    "google-oauth"
 ]
 
 setup(
